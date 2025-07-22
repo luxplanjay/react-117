@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Mr. Whiskerson",
+    "age": 3,
+    "image": "https://cataas.com/cat/says/Hello",
+    "available": true
+  },
+  {
+    "id": 2,
+    "name": "Sir Pounce-a-lot",
+    "age": 5,
+    "image": "https://cataas.com/cat/says/Meow",
+    "available": false
+  },
+  {
+    "id": 3,
+    "name": "Meowzilla",
+    "age": 2,
+    "image": "https://cataas.com/cat/says/Roar",
+    "available": true
+  },
+  {
+    "id": 4,
+    "name": "Fluffington III",
+    "age": 4,
+    "image": "https://cataas.com/cat/says/Purr",
+    "available": false
+  },
+  {
+    "id": 5,
+    "name": "Captain Purr",
+    "age": 1,
+    "image": "https://cataas.com/cat/says/Howdy",
+    "available": true
+  },
+  {
+    "id": 6,
+    "name": "The Great Catsby",
+    "age": 2,
+    "image": "https://cataas.com/cat/says/Welcome",
+    "available": false
+  }
+]
