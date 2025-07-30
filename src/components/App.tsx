@@ -1,36 +1,56 @@
-import { useState } from "react";
-import SearchForm from "./SearchForm/SearchForm";
-import ArticleList from "./ArticleList/ArticleList";
-import { getArticles } from "../services/articleService";
-import { Article } from "../types/article";
-
-console.log(import.meta.env.VITE_MY_API_KEY);
+// import axios from "axios";
+import { useState, useEffect } from "react";
+import { useLocalStorage } from "usehooks-ts";
+// import Timer from "./Timer";
+import Sidebar from "./Sidebar";
 
 export default function App() {
-  const [articles, setArticles] = useState<Article[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
+  // const [character, setCharacter] = useState(null);
+  // const [count, setCount] = useState(1);
 
-  const handleSearch = async (newTopic: string) => {
-    try {
-      setArticles([]);
-      setIsLoading(true);
-      setIsError(false);
-      const newArticles = await getArticles(newTopic);
-      setArticles(newArticles);
-    } catch {
-      setIsError(true);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const res = await axios.get(`https://swapi.info/api/people/${count}`);
+  //     setCharacter(res.data);
+  //   }
+
+  //   fetchData();
+  // }, [count]);
+
+  // const [isTimerVisible, setIsTimerVisible] = useState(false);
+
+  const [isSidebarOpen, setIsSidebarOpen] = useLocalStorage(
+    "sidebar-state",
+    false
+  );
+
+  const openSidebar = () => setIsSidebarOpen(true);
+  const closeSidebar = () => setIsSidebarOpen(false);
 
   return (
     <>
-      <SearchForm onSearch={handleSearch} />
-      {isLoading && <strong>Loading articles...</strong>}
-      {isError && <p>Whoops, there was an error :(</p>}
-      {articles.length > 0 && <ArticleList items={articles} />}
+      <button onClick={openSidebar}>Open sidebar</button>
+      {isSidebarOpen && <Sidebar onClose={closeSidebar} />}
+
+      {/* <button onClick={() => setCount(count + 1)}>Count {count}</button>
+      {character && <pre>{JSON.stringify(character, null, 2)}</pre>} */}
+      {/* <button onClick={() => setIsTimerVisible(!isTimerVisible)}>Toggle</button>
+      {isTimerVisible && <Timer />} */}
     </>
   );
 }
+
+// const [isSidebarOpen, setIsSidebarOpen] = useState(() => {
+//   const savedState = localStorage.getItem("sidebar-state");
+//   if (savedState !== null) {
+//     return JSON.parse(savedState);
+//   }
+//   return false;
+// });
+
+// const openSidebar = () => setIsSidebarOpen(true);
+// const closeSidebar = () => setIsSidebarOpen(false);
+
+// useEffect(() => {
+//   localStorage.setItem("sidebar-state", JSON.stringify(isSidebarOpen));
+// }, [isSidebarOpen]);
