@@ -27,10 +27,15 @@ export default function App() {
   const openSidebar = () => setIsSidebarOpen(true);
   const closeSidebar = () => setIsSidebarOpen(false);
 
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <button onClick={openSidebar}>Open sidebar</button>
       {isSidebarOpen && <Sidebar onClose={closeSidebar} />}
+
+      <button onClick={() => setIsOpen(true)}>Open second sidebar</button>
+      {isOpen && <Sidebar onClose={() => setIsOpen(false)} />}
 
       {/* <button onClick={() => setCount(count + 1)}>Count {count}</button>
       {character && <pre>{JSON.stringify(character, null, 2)}</pre>} */}
