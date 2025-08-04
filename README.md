@@ -1,15 +1,14 @@
-# Заняття 6 - Побічні ефекти
+# Заняття 7 - TanStack Query
 
-- Етапи життєвого циклу компонента: монтування, оновлення, розмонтування
-- Побічні ефекти з `useEffect`
+- Серверні дані та кешування
+- Інсталяція
+  [TanStack Query](https://tanstack.com/query/latest/docs/framework/react/installation)
+- Налаштування `QueryClient`
+- Налаштування `ReactQueryDevtools`
+- Хук `useQuery` та запити при монтуванні компонента
   - https://swapi.info/api/people/1
-  - Запит при монтуванні компонента
-  - Залежності ефекта
-  - Синтаксис `async/await`
-  - Суворий режим і подвійне монтування (`Timer`)
-  - Очищення ефектів (`Timer`)
-  - Створюємо сайдбар (`Sidebar`)
-- Робота з LocalStorage
-  - Зберігаємо стан сайдбара (`Sidebar`)
-  - Запис через ефект
-  - Читання через `useState(callback)`
+  - Ключі запиту
+- Залежні запити з `enabled`
+- Пагінація запитів
+  - `placeholderData` та `keepPreviousData`
+  - Бібліотека [React Paginate](https://www.npmjs.com/package/react-paginate)
