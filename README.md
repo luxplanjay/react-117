@@ -1,9 +1,33 @@
-# Заняття 10 - Контрольовані елементи
+# Заняття 11 - Знайомство з Next.js
 
-- Контрольовані елементи
-  - Атрибути `value` та `onChange`
-- Компоненти `SearchBox` та `SortFilter`
-- Відкладений пошук з [use-debounce](https://www.npmjs.com/package/use-debounce)
-  - Хук `useDebouncedCallback`
-- Відкладений пошук з React Query
-- Власні хуки
+## Що нам дає Next.js
+
+- Серверний і клієнський рендеринг
+- Файлова маршрутизація (багато сторінок)
+- Оптимізація зображень
+
+## Структура проєкта
+
+- Next CLI
+- Структура папок та файлів
+
+```shell
+npm install -D prettier eslint-config-prettier
+```
+
+## SSR vs CSR
+
+- Серверні та клієнські компоненти
+
+## Маршрутизація
+
+- Серверна, клієнтська, гібридна
+- Файлова маршрутизація
+- Навігація із `next/link`
+- Що таке layout. Метадані.
+
+```shell
+localhost:3000 > app/page.tsx
+localhost:3000/about > app/about/page.tsx
+localhost:3000/profile > app/profile/page.tsx
+```
