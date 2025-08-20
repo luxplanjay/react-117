@@ -1,19 +1,21 @@
 import Link from "next/link";
+import css from "./AppHeader.module.css";
 
 export default function AppHeader() {
   return (
-    <header>
-      <ul>
+    <header className={css.header}>
+      <ul className={css.nav}>
         <li>
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/about">About</Link>
+          <Link href="/posts">Posts</Link>
         </li>
         <li>
-          <Link href="/profile">Profile</Link>
+          <Link href="/tasks">Tasks</Link>
         </li>
       </ul>
+      <hr />
     </header>
   );
 }

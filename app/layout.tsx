@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import AppHeader from "@/components/AppHeader/AppHeader";
+import TanStackProvider from "@/components/TanStackProvider";
 import "./globals.css";
-import AppHeader from "@/components/app-header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,12 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <AppHeader />
-        {children}
+        <TanStackProvider>
+          <AppHeader />
+          {children}
+        </TanStackProvider>
       </body>
     </html>
   );
 }
-
-// localhost:3000 > next server > layout.tsx + app/page.tsx > index.html
-// localhost:3000/about > next server > layout.tsx + app/about.page.tsx > about.html

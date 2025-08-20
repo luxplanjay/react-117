@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  padding: 12px;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
