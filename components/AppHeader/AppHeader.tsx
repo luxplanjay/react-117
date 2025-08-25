@@ -9,13 +9,9 @@ export default function AppHeader() {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/posts">Posts</Link>
-        </li>
-        <li>
-          <Link href="/tasks">Tasks</Link>
+          <Link href="/inbox">Inbox</Link>
         </li>
       </ul>
-      <hr />
     </header>
   );
 }
