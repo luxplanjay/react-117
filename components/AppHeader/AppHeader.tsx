@@ -9,7 +9,7 @@ export default function AppHeader() {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/inbox">Inbox</Link>
+          <Link href="/products/beauty">Products</Link>
         </li>
       </ul>
     </header>
