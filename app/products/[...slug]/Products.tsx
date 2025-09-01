@@ -1,9 +1,9 @@
 "use client";
 
-import { fetchProductsByCategory } from "@/lib/products-api";
-import { useQuery } from "@tanstack/react-query";
-import { useParams } from "next/navigation";
 import Link from "next/link";
+import { useParams } from "next/navigation";
+import { useQuery } from "@tanstack/react-query";
+import { fetchProductsByCategory } from "@/lib/products-api";
 
 export default function Products() {
   const { slug } = useParams<{ slug: string[] }>();
