@@ -1,4 +1,5 @@
 import { fetchProductById } from "@/lib/products-api";
+import Image from "next/image";
 
 export default async function ProductDetailsPage({
   params,
@@ -14,7 +15,12 @@ export default async function ProductDetailsPage({
       <h2>{product.title}</h2>
       <p>{product.description}</p>
       <p>Price: {product.price}</p>
-      <img src={product.images[0]} alt={product.title} width="240" />
+      <Image
+        src={product.images[0]}
+        alt={product.title}
+        width={240}
+        height={240}
+      />
     </div>
   );
 }
