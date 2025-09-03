@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Hanalei } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import AppHeader from "@/components/AppHeader/AppHeader";
 import TanStackProvider from "@/components/TanStackProvider";
 import "./globals.css";
@@ -14,12 +14,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   weight: ["900"],
-});
-
-const hanalei = Hanalei({
-  variable: "--font-hanalei",
-  subsets: ["latin"],
-  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -49,9 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${hanalei.variable}`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <TanStackProvider>
           <AppHeader />
           {children}
