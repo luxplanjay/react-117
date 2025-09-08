@@ -1,5 +1,7 @@
-# Заняття 15 - Zustand
+# Заняття 16 - API routes
 
-- Глобальний стан
-- Zustand
-- Persist
+- Архітектура Next.js
+- Авторизація та автентифікація з кукі
+- Проблема CORS
+- BFF
+- API routes
