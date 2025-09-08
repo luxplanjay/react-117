@@ -2,7 +2,10 @@ import { NextResponse, type NextRequest } from "next/server";
 import { api, ApiError } from "../../api";
 
 // GET localhost:3000/api/tasks/:taskId
-export async function GET(request: NextRequest, { params }) {
+export async function GET(
+  _req: NextRequest,
+  { params }: { params: Promise<{ taskId: string }> }
+) {
   console.log("3 - Next Server GET");
   try {
     const { taskId } = await params;
