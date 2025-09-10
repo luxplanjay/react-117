@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import AppHeader from "@/components/AppHeader/AppHeader";
 import TanStackProvider from "@/components/TanStackProvider";
 import "./globals.css";
+import AuthProvider from "@/components/AuthProvider/AuthProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,8 +46,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <TanStackProvider>
-          <AppHeader />
-          {children}
+          <AuthProvider>
+            <AppHeader />
+            {children}
+          </AuthProvider>
         </TanStackProvider>
       </body>
     </html>
